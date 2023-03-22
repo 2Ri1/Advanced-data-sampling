@@ -11,12 +11,12 @@ CREATE TABLE IF NOT EXISTS Singer(
 CREATE TABLE IF NOT EXISTS Singer_genre(
  singer_genre_id SERIAL PRIMARY KEY,
  music_genre_id SERIAL NOT NULL REFERENCES Music_genre(music_genre_id),
- singer_id SERIAL NOT NULL REFERENCES Singer(singer_id)
+ singer_id  SERIAL NOT NULL 
 );
 
 
 CREATE TABLE IF NOT EXISTS Album(
- album_id SERIAL PRIMARY KEY,
+album_id  SERIAL PRIMARY KEY,
  album_title VARCHAR(30) NOT NULL,
         album_year date NOT NULL
 );
